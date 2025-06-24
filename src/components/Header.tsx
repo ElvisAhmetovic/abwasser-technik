@@ -9,7 +9,7 @@ const Header = () => {
   const navigationItems = [
     { name: '24h Notdienst', href: '/notdienst' },
     { name: 'Leistungen', href: '#services' },
-    { name: 'Über uns', href: '#about' },
+    { name: 'Über uns', href: '/ueber-uns' },
     { name: 'Kontakt', href: '#contact' },
   ];
 
