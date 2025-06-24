@@ -1,5 +1,6 @@
 
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 const LeistungenPage = () => {
   return (
@@ -128,6 +129,66 @@ const LeistungenPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Custom Footer Section */}
+      <section className="py-16 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Company Info */}
+            <div>
+              <h3 className="text-2xl font-bold text-blue-600 mb-4">
+                Abwasser Technik
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                Rohrreinigung & Kanalsanierung in Ihrer Nähe. Unsere Hauptzentrale ist in der schönen Stadt Offenbach.
+              </p>
+              <p className="text-gray-500 text-sm mt-8">
+                ©2025 All rights reserved
+              </p>
+            </div>
+
+            {/* Links */}
+            <div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-4">Links</h4>
+              <ul className="space-y-2">
+                <li>
+                  <a href="/notdienst" className="text-gray-600 hover:text-blue-600 transition-colors">
+                    24h Notdienst
+                  </a>
+                </li>
+                <li>
+                  <a href="/leistungen" className="text-gray-600 hover:text-blue-600 transition-colors">
+                    Leistungen
+                  </a>
+                </li>
+                <li>
+                  <a href="/ueber-uns" className="text-gray-600 hover:text-blue-600 transition-colors">
+                    Über uns
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" className="text-gray-600 hover:text-blue-600 transition-colors">
+                    Kontakt
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Contact Info */}
+            <div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-4">Nehmen Sie Kontakt auf</h4>
+              <div className="space-y-2">
+                <p className="text-gray-600">abwassertec.hessen@web.de</p>
+                <p className="text-gray-600">0176-80559608</p>
+                <p className="text-gray-600">Senefelder Str. 37 63069 Offenbach</p>
+                <p className="text-gray-600">Öffnungszeiten: 24/7</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
     </div>
   );
 };
