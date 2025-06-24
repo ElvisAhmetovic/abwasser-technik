@@ -1,8 +1,12 @@
 
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { Link } from 'react-router-dom';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const LeistungenPage = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -12,20 +16,20 @@ const LeistungenPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-8">
-              Unsere Dienstleistungen – Transparent, Fair & Zuverlässig
+              {t('servicesPage.hero.title')}
             </h1>
             <div className="max-w-4xl mx-auto text-lg space-y-4">
               <p className="flex items-center justify-center">
                 <span className="text-green-300 mr-2">✓</span>
-                Faire und transparente Preisgestaltung – Für private und gewerbliche Kunden ohne versteckte Kosten.
+                {t('servicesPage.hero.point1')}
               </p>
               <p className="flex items-center justify-center">  
                 <span className="text-green-300 mr-2">✓</span>
-                Festpreisgarantie – Klare Kalkulation, keine Überraschungen, volle Kostenkontrolle.
+                {t('servicesPage.hero.point2')}
               </p>
               <p className="flex items-center justify-center">
                 <span className="text-green-300 mr-2">✓</span>
-                Effektive Rohrreinigung & Verstopfungsbeseitigung – Schnell, zuverlässig und professionell. Mit unserem Festpreiskonzept wissen Sie von Anfang an, welche Kosten auf Sie zukommen – ohne böse Überraschungen!
+                {t('servicesPage.hero.point3')}
               </p>
             </div>
           </div>
@@ -37,7 +41,7 @@ const LeistungenPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-4">
-              Schnelle Anfahrt zum Einsatzort
+              {t('servicesPage.section.title')}
             </h2>
           </div>
 
@@ -53,7 +57,7 @@ const LeistungenPage = () => {
               </div>
               <div className="text-4xl font-bold text-blue-600 mb-4">1</div>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Manuelle Beseitigung von Verstopfungen in Objekten z. B. Toiletten, Waschbecken, Spülen usw. Festpreise inklusive An- und Abfahrt
+                {t('servicesPage.service1.title')}
               </p>
             </div>
 
@@ -68,7 +72,7 @@ const LeistungenPage = () => {
               </div>
               <div className="text-4xl font-bold text-blue-600 mb-4">2</div>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Beseitigung von Verstopfungen in Wohnungs- oder Etagenleitungen bis zur Fall- oder Grundleitung, einschließlich Bodenabläufe. z. B. Anschlussleitungen, Sammelleitungen, Toiletten, Spülen, Waschbecken, Bidets, Bodenabläufe usw. Festpreise inklusive An- und Abfahrt.
+                {t('servicesPage.service2.title')}
               </p>
             </div>
 
@@ -83,11 +87,11 @@ const LeistungenPage = () => {
               </div>
               <div className="text-4xl font-bold text-blue-600 mb-4">3</div>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Verstopfungsbeseitigung an Leitungen innerhalb des Objekts sowie an Kleinhebeanlagen,
+                {t('servicesPage.service3.title')}
                 <br /><br />
-                z. B. Fallleitungen, Sammelleitungen, Schleppleitungen und Regenleitungen,
+                {t('servicesPage.service3.subtitle')}
                 <br /><br />
-                einschließlich Festpreise für An- und Abfahrt.
+                {t('servicesPage.service3.footer')}
               </p>
             </div>
 
@@ -102,11 +106,11 @@ const LeistungenPage = () => {
               </div>
               <div className="text-4xl font-bold text-blue-600 mb-4">4</div>
               <p className="text-gray-700 text-sm leading-relaxed">
-                Verstopfungsbeseitigung an Leitungen außerhalb des Objekts sowie an Hauptleitungen und Hebeanlagen,
+                {t('servicesPage.service4.title')}
                 <br /><br />
-                z. B. Grundleitungen, Hauptleitungen, Schächte und Hebeanlagen,
+                {t('servicesPage.service4.subtitle')}
                 <br /><br />
-                einschließlich Festpreise für An- und Abfahrt.
+                {t('servicesPage.service4.footer')}
               </p>
             </div>
           </div>
@@ -117,13 +121,13 @@ const LeistungenPage = () => {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-blue-50 rounded-lg p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">Ausführung:</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">{t('servicesPage.execution.title')}</h3>
             <p className="text-gray-700 leading-relaxed mb-6">
-              Der Einsatz von Maschinen und Geräten sowie die Durchführung der Arbeiten obliegen im Rahmen des erteilten Auftrags ausschließlich unseren Mitarbeitern, die hierbei insbesondere die Arbeitsicherheit und Unfallverhütungsvorschriften zu beachten müssen. Unsere Leistungen, wie Reinigung, Entstopfung, Kanalreinigungsarbeiten, TV-Inspektion der Gruen als Bestimmung der Besichtigung auch zu Schäden an den Rohren (z. B. Rohrbruch, starker gerichteten Erfolg zu ermöglichen. Dazu kann es erforderlich sein, Kanäle und Leitungen freizulegen, z. B. durch das Aufstmen eines Fußbodens, um Rohrschäden zu reparieren und die Leitung zu entstopfen.
+              {t('servicesPage.execution.description')}
             </p>
             <div className="bg-blue-100 p-6 rounded-lg">
               <p className="text-blue-800 font-medium text-lg">
-                Unsere Notdienstzeiten sind rund um die Uhr, also 24 Stunden an 7 Tagen in der Woche, einschließlich Montag bis Freitag von 17:00 Uhr bis 08:00 Uhr sowie an Samstagen, Sonn- und Feiertagen.
+                {t('servicesPage.execution.notice')}
               </p>
             </div>
           </div>
@@ -137,51 +141,51 @@ const LeistungenPage = () => {
             {/* Company Info */}
             <div>
               <h3 className="text-2xl font-bold text-blue-600 mb-4">
-                Abwasser Technik
+                {t('about.company')}
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Rohrreinigung & Kanalsanierung in Ihrer Nähe. Unsere Hauptzentrale ist in der schönen Stadt Offenbach.
+                {t('about.description')}
               </p>
               <p className="text-gray-500 text-sm mt-8">
-                ©2025 All rights reserved
+                {t('footer.copyright')}
               </p>
             </div>
 
             {/* Links */}
             <div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-4">Links</h4>
+              <h4 className="text-lg font-semibold text-gray-900 mb-4">{t('about.links')}</h4>
               <ul className="space-y-2">
                 <li>
-                  <a href="/notdienst" className="text-gray-600 hover:text-blue-600 transition-colors">
-                    24h Notdienst
-                  </a>
+                  <Link to="/notdienst" className="text-gray-600 hover:text-blue-600 transition-colors">
+                    {t('nav.emergency')}
+                  </Link>
                 </li>
                 <li>
-                  <a href="/leistungen" className="text-gray-600 hover:text-blue-600 transition-colors">
-                    Leistungen
-                  </a>
+                  <Link to="/leistungen" className="text-gray-600 hover:text-blue-600 transition-colors">
+                    {t('nav.services')}
+                  </Link>
                 </li>
                 <li>
-                  <a href="/ueber-uns" className="text-gray-600 hover:text-blue-600 transition-colors">
-                    Über uns
-                  </a>
+                  <Link to="/ueber-uns" className="text-gray-600 hover:text-blue-600 transition-colors">
+                    {t('nav.about')}
+                  </Link>
                 </li>
                 <li>
-                  <a href="#contact" className="text-gray-600 hover:text-blue-600 transition-colors">
-                    Kontakt
-                  </a>
+                  <Link to="/kontakt" className="text-gray-600 hover:text-blue-600 transition-colors">
+                    {t('nav.contact')}
+                  </Link>
                 </li>
               </ul>
             </div>
 
             {/* Contact Info */}
             <div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-4">Nehmen Sie Kontakt auf</h4>
+              <h4 className="text-lg font-semibold text-gray-900 mb-4">{t('about.contact')}</h4>
               <div className="space-y-2">
                 <p className="text-gray-600">abwassertec.hessen@web.de</p>
                 <p className="text-gray-600">0176-80559608</p>
                 <p className="text-gray-600">Senefelder Str. 37 63069 Offenbach</p>
-                <p className="text-gray-600">Öffnungszeiten: 24/7</p>
+                <p className="text-gray-600">{t('contactPage.banner.hours')} {t('contactPage.banner.hoursText')}</p>
               </div>
             </div>
           </div>
