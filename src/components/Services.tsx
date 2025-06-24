@@ -12,7 +12,7 @@ const Services = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-200 to-blue-200 rounded-full blur-3xl opacity-30 scale-150"></div>
               <div className="relative bg-white rounded-3xl p-1">
                 <img
-                  src="/lovable-uploads/ac0ee41a-33e5-4552-ab17-b1a2dfd17f4e.png"
+                  src="/lovable-uploads/03fb0364-555a-41b6-a688-234d55946492.png"
                   alt="24h Notdienst"
                   className="rounded-3xl w-full h-auto"
                 />
@@ -45,7 +45,7 @@ const Services = () => {
           <div>
             <div className="mb-8">
               <img
-                src="/lovable-uploads/38eaee19-d110-4739-b08e-b615fcfc703b.png"
+                src="/lovable-uploads/e1f0975c-de79-4d1a-8fb5-bc9b2e92c2f6.png"
                 alt="Rohr- & Kanalreinigung"
                 className="w-full h-64 object-cover rounded-2xl"
               />
@@ -66,7 +66,7 @@ const Services = () => {
           <div>
             <div className="mb-8">
               <img
-                src="/lovable-uploads/38eaee19-d110-4739-b08e-b615fcfc703b.png"
+                src="/lovable-uploads/831dc2a5-f0ed-4049-af3d-3ad82147e8f8.png"
                 alt="Rohr- & Kanalsanierung"
                 className="w-full h-64 object-cover rounded-2xl"
               />
@@ -89,7 +89,7 @@ const Services = () => {
           <div>
             <div className="mb-8">
               <img
-                src="/lovable-uploads/9fdd4797-601d-4cc5-821b-69ceadd1fd8a.png"
+                src="/lovable-uploads/9fb815a2-3c67-47c8-98fd-f5515c3ed700.png"
                 alt="Rohr- & Kanaluntersuchung mit TV-Kamera"
                 className="w-full h-64 object-cover rounded-2xl"
               />
@@ -111,7 +111,7 @@ const Services = () => {
           <div>
             <div className="mb-8">
               <img
-                src="/lovable-uploads/9fdd4797-601d-4cc5-821b-69ceadd1fd8a.png"
+                src="/lovable-uploads/e712b1a3-d40a-4fc2-8749-4bea13a8addf.png"
                 alt="Kanaldichtheitsprüfung"
                 className="w-full h-64 object-cover rounded-2xl"
               />
