@@ -31,7 +31,7 @@ const NotdienstPage = () => {
             </div>
             <div className="relative">
               <img
-                src="/lovable-uploads/c39f832f-5956-4577-8c55-1511b6f3a259.png"
+                src="/lovable-uploads/9e0925f0-936e-44d2-936b-97e0d619da1c.png"
                 alt="Notfall Rohrreinigungsservice"
                 className="rounded-3xl w-full h-auto shadow-2xl"
               />
