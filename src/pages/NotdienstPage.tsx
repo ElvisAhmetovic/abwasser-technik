@@ -1,4 +1,3 @@
-
 import { ArrowRight, CheckCircle } from 'lucide-react';
 
 const NotdienstPage = () => {
@@ -27,7 +26,7 @@ const NotdienstPage = () => {
             </div>
             <div className="relative">
               <img
-                src="/lovable-uploads/b2428096-b477-44ec-ae50-e2b5dac4905a.png"
+                src="/lovable-uploads/990455ae-ddb8-43af-8fc0-8f0d46e6908c.png"
                 alt="Notfall Rohrreinigungsservice"
                 className="rounded-3xl w-full h-auto shadow-2xl"
               />
