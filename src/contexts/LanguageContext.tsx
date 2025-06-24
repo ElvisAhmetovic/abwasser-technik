@@ -79,8 +79,8 @@ const translations = {
     // Contact Page
     'contactPage.title': 'KONTAKT',
     'contactPage.subtitle': 'Kontaktieren Sie uns, wir stehen Ihnen jederzeit zur Verfügung!',
-    'contactPage.formTitle': 'Contact Us',
-    'contactPage.formSubtitle': 'Fill out the form below and we will contact you as soon as possible',
+    'contactPage.formTitle': 'Kontaktieren Sie uns',
+    'contactPage.formSubtitle': 'Füllen Sie das untenstehende Formular aus und wir werden uns so schnell wie möglich bei Ihnen melden',
     'contactPage.meetTitle': 'Lass uns treffen',
     'contactPage.meetSubtitle': 'Kaffee geht auf uns☕',
     'contactPage.callUs': 'Rufen Sie uns an',
