@@ -30,6 +30,26 @@ const ContactForm = ({ type = 'contact', serviceType }: ContactFormProps) => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
+  const sendEmailNotification = async () => {
+    try {
+      const { error } = await supabase.functions.invoke('send-notification', {
+        body: {
+          type,
+          formData: {
+            ...formData,
+            serviceType
+          }
+        }
+      });
+
+      if (error) {
+        console.error('Email notification error:', error);
+      }
+    } catch (error) {
+      console.error('Failed to send email notification:', error);
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -87,6 +107,9 @@ const ContactForm = ({ type = 'contact', serviceType }: ContactFormProps) => {
           description: "Vielen Dank für Ihre Nachricht. Wir melden uns bald bei Ihnen.",
         });
       }
+
+      // Send email notification
+      await sendEmailNotification();
 
       // Reset form
       setFormData({
