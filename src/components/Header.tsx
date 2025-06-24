@@ -2,15 +2,18 @@
 import { Menu, X, Phone } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '@/contexts/LanguageContext';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   const navigationItems = [
-    { name: '24h Notdienst', href: '/notdienst' },
-    { name: 'Leistungen', href: '/leistungen' },
-    { name: 'Über uns', href: '/ueber-uns' },
-    { name: 'Kontakt', href: '/kontakt' },
+    { name: t('nav.emergency'), href: '/notdienst' },
+    { name: t('nav.services'), href: '/leistungen' },
+    { name: t('nav.about'), href: '/ueber-uns' },
+    { name: t('nav.contact'), href: '/kontakt' },
   ];
 
   return (
@@ -49,20 +52,28 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Phone Number */}
-          <div className="hidden lg:flex items-center bg-orange-100 px-4 py-2 rounded-full">
-            <Phone className="w-4 h-4 text-orange-600 mr-2" />
-            <span className="text-orange-600 font-medium">0176-80559608</span>
-          </div>
+          {/* Right side items */}
+          <div className="flex items-center space-x-4">
+            {/* Language Switcher */}
+            <div className="hidden lg:block">
+              <LanguageSwitcher />
+            </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700 hover:text-blue-600"
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+            {/* Phone Number */}
+            <div className="hidden lg:flex items-center bg-orange-100 px-4 py-2 rounded-full">
+              <Phone className="w-4 h-4 text-orange-600 mr-2" />
+              <span className="text-orange-600 font-medium">0176-80559608</span>
+            </div>
+
+            {/* Mobile menu button */}
+            <div className="md:hidden">
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="text-gray-700 hover:text-blue-600"
+              >
+                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </div>
           </div>
         </div>
 
@@ -80,9 +91,12 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              <div className="flex items-center pt-4">
-                <Phone className="w-4 h-4 text-orange-600 mr-2" />
-                <span className="text-orange-600 font-medium">0176-80559608</span>
+              <div className="flex items-center justify-between pt-4">
+                <div className="flex items-center">
+                  <Phone className="w-4 h-4 text-orange-600 mr-2" />
+                  <span className="text-orange-600 font-medium">0176-80559608</span>
+                </div>
+                <LanguageSwitcher />
               </div>
             </nav>
           </div>

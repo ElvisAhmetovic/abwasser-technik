@@ -1,7 +1,10 @@
 
 import { ArrowDown } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Hero = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="home" className="pt-20 bg-gradient-to-br from-purple-600 via-blue-600 to-cyan-500 min-h-screen flex items-center relative overflow-hidden">
       {/* Background Pattern */}
@@ -15,19 +18,17 @@ const Hero = () => {
           {/* Content */}
           <div className="text-white">
             <p className="text-cyan-200 mb-4 font-medium">
-              Ihr zuverlässiger Partner
+              {t('hero.subtitle')}
             </p>
             <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-              Rohrreinigung & Kanalreinigung
+              {t('hero.title')}
             </h1>
             <p className="text-xl text-cyan-100 mb-8 leading-relaxed">
-              Rund um die Uhr im Einsatz! Wir bieten zuverlässige Rohr- und Kanalreinigung mit modernster 
-              Technik – von TV-Kamera-Inspektionen und Dichtheitsüberprüfungen bis zur gründlichen 
-              Verstopfungsbeseitigung. Für private und gewerbliche Kunden!
+              {t('hero.description')}
             </p>
             
             <button className="bg-cyan-400 text-blue-900 px-8 py-4 rounded-full hover:bg-cyan-300 transition-colors duration-200 flex items-center font-medium group">
-              Jetzt planen
+              {t('hero.cta')}
               <ArrowDown className="ml-2 w-5 h-5 group-hover:translate-y-1 transition-transform duration-200" />
             </button>
           </div>

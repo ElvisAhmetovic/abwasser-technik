@@ -1,8 +1,10 @@
+
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import { useLanguage } from '@/contexts/LanguageContext';
 import { supabase } from '@/integrations/supabase/client';
 
 interface ContactFormProps {
@@ -21,6 +23,7 @@ const ContactForm = ({ type = 'contact', serviceType }: ContactFormProps) => {
     description: ''
   });
   const { toast } = useToast();
+  const { t } = useLanguage();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -111,14 +114,14 @@ const ContactForm = ({ type = 'contact', serviceType }: ContactFormProps) => {
       <div className={type === 'contact' ? "grid md:grid-cols-2 gap-6" : "space-y-6"}>
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">
-            {type === 'contact' ? 'Vorname' : 'Name'}
+            {type === 'contact' ? t('form.firstName') : 'Name'}
           </label>
           <Input
             type="text"
             name="name"
             value={formData.name}
             onChange={handleInputChange}
-            placeholder={type === 'contact' ? "Ihr Vorname" : "Ihr Name"}
+            placeholder={type === 'contact' ? t('form.firstNamePlaceholder') : "Ihr Name"}
             required
           />
         </div>
@@ -126,12 +129,12 @@ const ContactForm = ({ type = 'contact', serviceType }: ContactFormProps) => {
         {type === 'contact' && (
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Nachname
+              {t('form.lastName')}
             </label>
             <Input
               type="text"
               name="lastname"
-              placeholder="Ihr Nachname"
+              placeholder={t('form.lastNamePlaceholder')}
             />
           </div>
         )}
@@ -140,14 +143,14 @@ const ContactForm = ({ type = 'contact', serviceType }: ContactFormProps) => {
       {type !== 'emergency' && (
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">
-            E-Mail
+            {t('form.email')}
           </label>
           <Input
             type="email"
             name="email"
             value={formData.email}
             onChange={handleInputChange}
-            placeholder="ihre.email@beispiel.de"
+            placeholder={t('form.emailPlaceholder')}
             required
           />
         </div>
@@ -155,14 +158,14 @@ const ContactForm = ({ type = 'contact', serviceType }: ContactFormProps) => {
 
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-2">
-          Telefon
+          {t('form.phone')}
         </label>
         <Input
           type="tel"
           name="phone"
           value={formData.phone}
           onChange={handleInputChange}
-          placeholder="+49 123 456 789"
+          placeholder={t('form.phonePlaceholder')}
           required
         />
       </div>
@@ -185,14 +188,14 @@ const ContactForm = ({ type = 'contact', serviceType }: ContactFormProps) => {
 
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-2">
-          {type === 'emergency' ? 'Beschreibung des Problems' : 'Nachricht'}
+          {type === 'emergency' ? 'Beschreibung des Problems' : t('form.message')}
         </label>
         <Textarea
           rows={6}
           name={type === 'emergency' ? 'description' : 'message'}
           value={type === 'emergency' ? formData.description : formData.message}
           onChange={handleInputChange}
-          placeholder={type === 'emergency' ? "Beschreiben Sie Ihr Problem..." : "Beschreiben Sie Ihr Anliegen..."}
+          placeholder={type === 'emergency' ? "Beschreiben Sie Ihr Problem..." : t('form.messagePlaceholder')}
           required
         />
       </div>
@@ -202,7 +205,7 @@ const ContactForm = ({ type = 'contact', serviceType }: ContactFormProps) => {
         disabled={isSubmitting}
         className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 rounded-lg transition-colors duration-200 font-medium"
       >
-        {isSubmitting ? 'Wird gesendet...' : 'Nachricht senden'}
+        {isSubmitting ? t('form.sending') : t('form.send')}
       </Button>
     </form>
   );
