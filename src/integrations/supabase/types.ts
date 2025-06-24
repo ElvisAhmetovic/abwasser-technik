@@ -9,7 +9,108 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
-      [_ in never]: never
+      contact_submissions: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          message: string
+          name: string
+          phone: string | null
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          message: string
+          name: string
+          phone?: string | null
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          message?: string
+          name?: string
+          phone?: string | null
+        }
+        Relationships: []
+      }
+      emergency_calls: {
+        Row: {
+          address: string
+          created_at: string
+          description: string
+          id: string
+          name: string
+          phone: string
+          priority: string | null
+          resolved_at: string | null
+          status: string | null
+        }
+        Insert: {
+          address: string
+          created_at?: string
+          description: string
+          id?: string
+          name: string
+          phone: string
+          priority?: string | null
+          resolved_at?: string | null
+          status?: string | null
+        }
+        Update: {
+          address?: string
+          created_at?: string
+          description?: string
+          id?: string
+          name?: string
+          phone?: string
+          priority?: string | null
+          resolved_at?: string | null
+          status?: string | null
+        }
+        Relationships: []
+      }
+      service_requests: {
+        Row: {
+          created_at: string
+          description: string | null
+          email: string
+          id: string
+          name: string
+          phone: string | null
+          service_type: string
+          status: string | null
+          updated_at: string
+          urgent: boolean | null
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          email: string
+          id?: string
+          name: string
+          phone?: string | null
+          service_type: string
+          status?: string | null
+          updated_at?: string
+          urgent?: boolean | null
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          email?: string
+          id?: string
+          name?: string
+          phone?: string | null
+          service_type?: string
+          status?: string | null
+          updated_at?: string
+          urgent?: boolean | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

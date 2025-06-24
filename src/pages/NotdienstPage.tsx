@@ -1,5 +1,6 @@
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import Header from '../components/Header';
+import EmergencyForm from '../components/EmergencyForm';
 
 const NotdienstPage = () => {
   return (
@@ -34,6 +35,21 @@ const NotdienstPage = () => {
               />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Emergency Form Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-red-600 mb-4">
+              Sofortige Hilfe anfordern
+            </h2>
+            <p className="text-gray-600">
+              Haben Sie einen Notfall? Füllen Sie das Formular aus und wir rufen Sie sofort zurück!
+            </p>
+          </div>
+          <EmergencyForm />
         </div>
       </section>
 

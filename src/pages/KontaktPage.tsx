@@ -1,6 +1,6 @@
-
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ContactForm from '@/components/ContactForm';
 import { Phone, MapPin, Mail } from 'lucide-react';
 
 const KontaktPage = () => {
@@ -35,47 +35,7 @@ const KontaktPage = () => {
           </div>
 
           <div className="bg-white rounded-lg p-8 shadow-lg">
-            <form className="space-y-6">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Name
-                </label>
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-                />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Message
-                </label>
-                <textarea
-                  rows={6}
-                  placeholder="Message"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent resize-none"
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                className="w-full bg-cyan-400 text-white py-4 rounded-lg hover:bg-cyan-500 transition-colors duration-200 font-medium"
-              >
-                Send
-              </button>
-            </form>
+            <ContactForm type="contact" />
           </div>
         </div>
       </section>
