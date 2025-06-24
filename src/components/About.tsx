@@ -1,5 +1,6 @@
 
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   const { t } = useLanguage();
@@ -14,12 +15,15 @@ const About = () => {
           </h2>
           
           <div className="max-w-4xl mx-auto">
-            <button className="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition-colors duration-200 flex items-center mx-auto font-medium group">
+            <Link 
+              to="/leistungen"
+              className="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition-colors duration-200 flex items-center mx-auto font-medium group w-fit"
+            >
               {t('about.cta')}
               <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -38,10 +42,26 @@ const About = () => {
               <div>
                 <h4 className="font-semibold text-gray-900 mb-2">{t('about.links')}</h4>
                 <ul className="space-y-2 text-gray-600">
-                  <li>{t('nav.emergency')}</li>
-                  <li>{t('nav.services')}</li>
-                  <li>{t('nav.about')}</li>
-                  <li>{t('nav.contact')}</li>
+                  <li>
+                    <Link to="/notdienst" className="hover:text-blue-600 transition-colors">
+                      {t('nav.emergency')}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/leistungen" className="hover:text-blue-600 transition-colors">
+                      {t('nav.services')}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/ueber-uns" className="hover:text-blue-600 transition-colors">
+                      {t('nav.about')}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/kontakt" className="hover:text-blue-600 transition-colors">
+                      {t('nav.contact')}
+                    </Link>
+                  </li>
                 </ul>
               </div>
               

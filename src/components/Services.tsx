@@ -1,7 +1,10 @@
 
 import { ArrowRight } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Services = () => {
+  const { t } = useLanguage();
+
   return (
     <section id="services" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,18 +24,14 @@ const Services = () => {
             
             <div>
               <h2 className="text-4xl font-bold text-blue-600 mb-6">
-                24h Hotline - Rohrreinigung Notdienst
+                {t('services.emergency.title')}
               </h2>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Ihr WC verstopft? Das Waschbecken verstopft? Der Keller steht unter Wasser? 
-                Unser Notdienst steht Ihnen 24 Stunden am Tag, 365 Tage im Jahr zur 
-                Verfügung! Zuverlässige und schnelle Experten für all Ihre Probleme mit 
-                Sanitärinstallationen. Kontaktieren Sie uns, egal wie dringend – wir sind für Sie 
-                da!
+                {t('services.emergency.description')}
               </p>
               
               <button className="bg-cyan-500 text-white px-8 py-4 rounded-full hover:bg-cyan-600 transition-colors duration-200 flex items-center font-medium group">
-                Tel: 0176-80559608 - Direktruf zu dem Monteur
+                {t('services.emergency.cta')}
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
               </button>
             </div>
@@ -51,14 +50,10 @@ const Services = () => {
               />
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Rohr- & Kanalreinigung
+              {t('services.cleaning.title')}
             </h3>
             <p className="text-gray-600 leading-relaxed">
-              Rohrverstopfungen & Notdienst (24/7 & 365 Tage): Eine verstopfte 
-              Abwasserleitung tritt oft zum ungünstigsten Zeitpunkt auf und kann 
-              Überschwemmungen oder Rückstau verursachen. In solchen Fällen bieten wir 
-              Ihnen unseren 24-Stunden-Service zu fairen Festpreisen und ohne 
-              Anfahrtskosten an.
+              {t('services.cleaning.description')}
             </p>
           </div>
 
@@ -72,13 +67,10 @@ const Services = () => {
               />
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Rohr- & Kanalsanierung
+              {t('services.rehabilitation.title')}
             </h3>
             <p className="text-gray-600 leading-relaxed">
-              Bei der Überprüfung von Rohrleitungen können Defekte oder Schwachstellen 
-              auftreten, die eine Reparatur oder Sanierung notwendig machen. In solchen 
-              Fällen stehen wir Ihnen sowohl für gezielte Einzelmaßnahmen als auch für eine 
-              vollständige Sanierung mit unserer Expertise zur Verfügung.
+              {t('services.rehabilitation.description')}
             </p>
           </div>
         </div>
@@ -95,15 +87,10 @@ const Services = () => {
               />
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Rohr- & Kanaluntersuchung mit TV-Kamera
+              {t('services.inspection.title')}
             </h3>
             <p className="text-gray-600 leading-relaxed">
-              Eine Kamerainspektion ist entscheidend für die Beurteilung von 
-              Abwasserleitungen und Rohrsystemen. Sie bildet die Grundlage für 
-              Empfehlungen zur Rohrreinigung, Rohr- und Kanalsanierung sowie für mögliche 
-              Reparaturen. Unsere hochwertigen Inspektionssysteme bieten präzise Ergebnisse 
-              bei der Kanalinspektion und können flexibel in verschiedenen Szenarien 
-              eingesetzt werden.
+              {t('services.inspection.description')}
             </p>
           </div>
 
@@ -117,14 +104,10 @@ const Services = () => {
               />
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Kanaldichtheitsprüfung
+              {t('services.testing.title')}
             </h3>
             <p className="text-gray-600 leading-relaxed">
-              Die Kanaldichtheitsprüfung als Komplettservice – Laut § 59/60/61a des 
-              Wasserhaushaltsgesetzes in Verbindung mit der DIN 1986-30 sind alle 
-              Eigentümer von privaten Grundstücken verpflichtet, die Abwasserleitungen und 
-              Schächte ihrer häuslichen Entwässerungsanlagen regelmäßig auf ihren Zustand 
-              und ihre Dichtheit zu überprüfen.
+              {t('services.testing.description')}
             </p>
           </div>
         </div>
