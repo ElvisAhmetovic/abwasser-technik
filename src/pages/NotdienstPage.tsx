@@ -81,8 +81,8 @@ const NotdienstPage = () => {
             <div className="bg-cyan-100 rounded-2xl p-6 text-center">
               <div className="w-20 h-20 mx-auto mb-4 rounded-xl overflow-hidden">
                 <img
-                  src="/lovable-uploads/1160e61b-cb04-46f9-ba17-5c67d67777f8.png"
-                  alt="Service 1"
+                  src="/lovable-uploads/3efe8eca-5687-40b1-88aa-267e9e9ef0b4.png"
+                  alt="Manuelle Beseitigung"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -96,8 +96,8 @@ const NotdienstPage = () => {
             <div className="bg-cyan-50 rounded-2xl p-6 text-center">
               <div className="w-20 h-20 mx-auto mb-4 rounded-xl overflow-hidden">
                 <img
-                  src="/lovable-uploads/1160e61b-cb04-46f9-ba17-5c67d67777f8.png"
-                  alt="Service 2"
+                  src="/lovable-uploads/498857d7-3de5-40e4-aa92-a003d8568f8d.png"
+                  alt="Wohnungs- oder Etagenleitungen"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -111,8 +111,8 @@ const NotdienstPage = () => {
             <div className="bg-cyan-100 rounded-2xl p-6 text-center">
               <div className="w-20 h-20 mx-auto mb-4 rounded-xl overflow-hidden">
                 <img
-                  src="/lovable-uploads/1160e61b-cb04-46f9-ba17-5c67d67777f8.png"
-                  alt="Service 3"
+                  src="/lovable-uploads/9bae0fb0-adc0-4430-b9c3-a4e0ea244222.png"
+                  alt="Leitungen innerhalb des Objekts"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -126,8 +126,8 @@ const NotdienstPage = () => {
             <div className="bg-cyan-50 rounded-2xl p-6 text-center">
               <div className="w-20 h-20 mx-auto mb-4 rounded-xl overflow-hidden">
                 <img
-                  src="/lovable-uploads/1160e61b-cb04-46f9-ba17-5c67d67777f8.png"
-                  alt="Service 4"
+                  src="/lovable-uploads/262df020-815f-46d5-9bb1-3cb8037534fb.png"
+                  alt="Leitungen außerhalb des Objekts"
                   className="w-full h-full object-cover"
                 />
               </div>
