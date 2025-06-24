@@ -71,7 +71,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     const emailResponse = await resend.emails.send({
       from: "Abwasser Technik <onboarding@resend.dev>",
-      to: ["kanal-24@web.de"],
+      to: ["luciferbebistar@gmail.com"],
       subject: subject,
       html: htmlContent,
     });
