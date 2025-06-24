@@ -36,7 +36,7 @@ const Hero = () => {
           <div className="relative">
             <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-1">
               <img
-                src="/lovable-uploads/da945696-d841-493b-bdbc-7d40668f5ce9.png"
+                src="/lovable-uploads/f19bd8e7-0eff-4cd3-9dab-a75c10eeec58.png"
                 alt="Rohrreinigung Service"
                 className="rounded-3xl w-full h-auto shadow-2xl"
               />
