@@ -1,7 +1,9 @@
+
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ContactForm from '@/components/ContactForm';
 import { Phone, MapPin, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const KontaktPage = () => {
   return (
@@ -141,24 +143,24 @@ const KontaktPage = () => {
               <h4 className="text-lg font-semibold text-gray-900 mb-4">Links</h4>
               <ul className="space-y-2">
                 <li>
-                  <a href="/notdienst" className="text-gray-600 hover:text-blue-600 transition-colors">
+                  <Link to="/notdienst" className="text-gray-600 hover:text-blue-600 transition-colors">
                     24h Notdienst
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/leistungen" className="text-gray-600 hover:text-blue-600 transition-colors">
+                  <Link to="/leistungen" className="text-gray-600 hover:text-blue-600 transition-colors">
                     Leistungen
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/ueber-uns" className="text-gray-600 hover:text-blue-600 transition-colors">
+                  <Link to="/ueber-uns" className="text-gray-600 hover:text-blue-600 transition-colors">
                     Über uns
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/kontakt" className="text-gray-600 hover:text-blue-600 transition-colors">
+                  <Link to="/kontakt" className="text-gray-600 hover:text-blue-600 transition-colors">
                     Kontakt
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
