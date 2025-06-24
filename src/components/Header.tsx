@@ -19,20 +19,11 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <div className="w-12 h-12 mr-3">
-              <svg viewBox="0 0 48 48" className="w-full h-full">
-                <defs>
-                  <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#00BFFF" />
-                    <stop offset="50%" stopColor="#0080FF" />
-                    <stop offset="100%" stopColor="#4169E1" />
-                  </linearGradient>
-                </defs>
-                {/* Water droplet */}
-                <path d="M24 8 C16 16, 12 22, 12 28 C12 34, 17 40, 24 40 C31 40, 36 34, 36 28 C36 22, 32 16, 24 8 Z" fill="url(#logoGradient)" />
-                {/* Leaf elements */}
-                <path d="M18 32 C14 28, 14 24, 18 20 C22 24, 22 28, 18 32 Z" fill="#10B981" />
-                <path d="M30 32 C34 28, 34 24, 30 20 C26 24, 26 28, 30 32 Z" fill="#10B981" />
-              </svg>
+              <img 
+                src="/lovable-uploads/f54727bb-76ce-425a-b548-dd76c243440c.png" 
+                alt="Abwasser Technik Logo" 
+                className="w-full h-full object-contain"
+              />
             </div>
             <div>
               <div className="text-xl font-bold text-blue-600">
