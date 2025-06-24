@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -59,7 +58,7 @@ const ContactForm = ({ type = 'contact', serviceType }: ContactFormProps) => {
             phone: formData.phone,
             service_type: serviceType || 'rohrreinigung',
             description: formData.description,
-            urgent: type === 'emergency'
+            urgent: false
           });
 
         if (error) throw error;
