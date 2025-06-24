@@ -70,7 +70,7 @@ const handler = async (req: Request): Promise<Response> => {
     }
 
     const emailResponse = await resend.emails.send({
-      from: "Abwasser Technik <onboarding@resend.dev>",
+      from: "Abwasser Technik <noreply@yourdomain.com>", // Replace 'yourdomain.com' with your verified domain
       to: ["kanal-24@web.de"],
       subject: subject,
       html: htmlContent,
