@@ -7,17 +7,6 @@ const Footer = () => {
           <p className="text-gray-400 text-sm">
             © 2025 Abwasser-Technik. Alle Rechte vorbehalten.
           </p>
-          <div className="flex justify-center space-x-6 mt-4">
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
-              Impressum
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
-              Datenschutz
-            </a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
-              AGB
-            </a>
-          </div>
         </div>
       </div>
     </footer>
