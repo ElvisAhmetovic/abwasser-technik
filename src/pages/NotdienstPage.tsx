@@ -1,4 +1,5 @@
 
+
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import Header from '../components/Header';
 import EmergencyForm from '../components/EmergencyForm';
@@ -30,7 +31,7 @@ const NotdienstPage = () => {
             </div>
             <div className="relative">
               <img
-                src="/lovable-uploads/d7f93d05-5514-4947-9aa3-8905c9492290.png"
+                src="/lovable-uploads/c39f832f-5956-4577-8c55-1511b6f3a259.png"
                 alt="Notfall Rohrreinigungsservice"
                 className="rounded-3xl w-full h-auto shadow-2xl"
               />
@@ -207,3 +208,4 @@ const NotdienstPage = () => {
 };
 
 export default NotdienstPage;
+
