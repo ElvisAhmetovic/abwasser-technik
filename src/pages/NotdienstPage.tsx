@@ -1,10 +1,12 @@
 import { ArrowRight, CheckCircle } from 'lucide-react';
+import Header from '../components/Header';
 
 const NotdienstPage = () => {
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen">
+      <Header />
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-600 via-blue-600 to-cyan-500 py-20">
+      <section className="bg-gradient-to-br from-purple-600 via-blue-600 to-cyan-500 py-20 pt-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl lg:text-5xl font-bold text-white mb-8">
             Notfall-Rohrreinigungsservice
