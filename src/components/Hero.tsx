@@ -1,68 +1,45 @@
 
-import { ArrowRight, Droplets, Settings, Shield } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="home" className="pt-20 bg-gradient-to-br from-blue-50 to-gray-100 min-h-screen flex items-center">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <section id="home" className="pt-20 bg-gradient-to-br from-purple-600 via-blue-600 to-cyan-500 min-h-screen flex items-center relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-cyan-300 rounded-full blur-3xl"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <div className="animate-fade-in">
-            <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Professionelle
-              <span className="text-blue-800 block">Abwassertechnik</span>
+          <div className="text-white">
+            <p className="text-cyan-200 mb-4 font-medium">
+              Ihr zuverlässiger Partner
+            </p>
+            <h1 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+              Rohrreinigung & Kanalreinigung
             </h1>
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Ihr zuverlässiger Partner für moderne Abwasserbehandlung, Kläranlagen 
-              und umweltfreundliche Wassertechnologien. Mit über 25 Jahren Erfahrung 
-              bieten wir maßgeschneiderte Lösungen für Industrie und Kommunen.
+            <p className="text-xl text-cyan-100 mb-8 leading-relaxed">
+              Rund um die Uhr im Einsatz! Wir bieten zuverlässige Rohr- und Kanalreinigung mit modernster 
+              Technik – von TV-Kamera-Inspektionen und Dichtheitsüberprüfungen bis zur gründlichen 
+              Verstopfungsbeseitigung. Für private und gewerbliche Kunden!
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <button className="bg-blue-800 text-white px-8 py-4 rounded-lg hover:bg-blue-900 transition-colors duration-200 flex items-center justify-center group">
-                Beratung anfragen
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-              </button>
-              <button className="border-2 border-blue-800 text-blue-800 px-8 py-4 rounded-lg hover:bg-blue-800 hover:text-white transition-colors duration-200">
-                Unsere Projekte
-              </button>
-            </div>
-
-            {/* Key Features */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-              <div className="flex items-center space-x-3">
-                <Droplets className="w-8 h-8 text-blue-600" />
-                <div>
-                  <p className="font-semibold text-gray-900">Umweltschutz</p>
-                  <p className="text-sm text-gray-600">Nachhaltige Lösungen</p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Settings className="w-8 h-8 text-blue-600" />
-                <div>
-                  <p className="font-semibold text-gray-900">Expertise</p>
-                  <p className="text-sm text-gray-600">25+ Jahre Erfahrung</p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Shield className="w-8 h-8 text-blue-600" />
-                <div>
-                  <p className="font-semibold text-gray-900">Qualität</p>
-                  <p className="text-sm text-gray-600">Zertifizierte Systeme</p>
-                </div>
-              </div>
-            </div>
+            <button className="bg-cyan-400 text-blue-900 px-8 py-4 rounded-full hover:bg-cyan-300 transition-colors duration-200 flex items-center font-medium group">
+              Jetzt planen
+              <ArrowDown className="ml-2 w-5 h-5 group-hover:translate-y-1 transition-transform duration-200" />
+            </button>
           </div>
 
           {/* Image */}
-          <div className="animate-fade-in">
-            <div className="relative">
+          <div className="relative">
+            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-1">
               <img
-                src={`https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80`}
-                alt="Abwassertechnik Anlagen"
-                className="rounded-lg shadow-2xl w-full h-auto"
+                src="/lovable-uploads/da945696-d841-493b-bdbc-7d40668f5ce9.png"
+                alt="Rohrreinigung Service"
+                className="rounded-3xl w-full h-auto shadow-2xl"
               />
-              <div className="absolute inset-0 bg-blue-800/10 rounded-lg"></div>
             </div>
           </div>
         </div>

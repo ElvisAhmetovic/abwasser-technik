@@ -1,86 +1,60 @@
 
-import { Award, Users, Clock, MapPin } from 'lucide-react';
-
 const About = () => {
-  const stats = [
-    { icon: Clock, number: '25+', label: 'Jahre Erfahrung' },
-    { icon: Users, number: '500+', label: 'Zufriedene Kunden' },
-    { icon: Award, number: '50+', label: 'Abgeschlossene Projekte' },
-    { icon: MapPin, number: '3', label: 'Standorte' }
-  ];
-
   return (
-    <section id="about" className="py-20 bg-gray-50">
+    <section id="about" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
-          <div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Über uns
-            </h2>
-            <p className="text-lg text-gray-600 mb-6">
-              Seit über 25 Jahren sind wir Ihr vertrauensvoller Partner für professionelle 
-              Abwassertechnik. Unser erfahrenes Team aus Ingenieuren und Technikern entwickelt 
-              maßgeschneiderte Lösungen für die Herausforderungen der modernen Wasserwirtschaft.
-            </p>
-            <p className="text-lg text-gray-600 mb-8">
-              Wir kombinieren bewährte Technologien mit innovativen Ansätzen, um umweltfreundliche 
-              und wirtschaftliche Abwasserlösungen zu realisieren. Dabei legen wir besonderen Wert 
-              auf Nachhaltigkeit und Effizienz.
-            </p>
-
-            {/* Key Points */}
-            <div className="space-y-4 mb-8">
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-blue-600 rounded-full mt-3"></div>
-                <p className="text-gray-700">
-                  <strong>Zertifizierte Qualität:</strong> Alle unsere Systeme entsprechen höchsten Standards
-                </p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-blue-600 rounded-full mt-3"></div>
-                <p className="text-gray-700">
-                  <strong>Umweltschutz:</strong> Nachhaltiger Schutz von Gewässern und Umwelt
-                </p>
-              </div>
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-blue-600 rounded-full mt-3"></div>
-                <p className="text-gray-700">
-                  <strong>Innovation:</strong> Modernste Technologien für optimale Ergebnisse
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Image */}
-          <div>
-            <img
-              src={`https://images.unsplash.com/photo-1494891848038-7bd202a2afeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80`}
-              alt="Unser Team"
-              className="rounded-lg shadow-lg w-full h-auto"
-            />
+        <div className="text-center mb-16">
+          <p className="text-blue-600 font-medium mb-4">Wir lösen echte Probleme.</p>
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            Was können wir für Sie tun?
+          </h2>
+          
+          <div className="max-w-4xl mx-auto">
+            <button className="bg-blue-600 text-white px-8 py-4 rounded-full hover:bg-blue-700 transition-colors duration-200 flex items-center mx-auto font-medium group">
+              Mehr Dienstleistungen
+              <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
           </div>
         </div>
 
-        {/* Stats */}
-        <div className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-8">
-          {stats.map((stat, index) => (
-            <div
-              key={stat.label}
-              className="text-center animate-fade-in"
-              style={{ animationDelay: `${index * 150}ms` }}
-            >
-              <div className="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mx-auto mb-4">
-                <stat.icon className="w-8 h-8 text-blue-800" />
+        <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-8 lg:p-12">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-2xl font-bold text-blue-600 mb-4">
+                Abwasser Technik
+              </h3>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                Rohrreinigung & Kanalsanierung in Ihrer Nähe. Unsere Hauptzentrale ist in 
+                der schönen Stadt Offenbach.
+              </p>
+            </div>
+            
+            <div className="space-y-6">
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-2">Links</h4>
+                <ul className="space-y-2 text-gray-600">
+                  <li>24h Notdienst</li>
+                  <li>Leistungen</li>
+                  <li>Über uns</li>
+                  <li>Kontakt</li>
+                </ul>
               </div>
-              <div className="text-3xl font-bold text-blue-800 mb-2">
-                {stat.number}
-              </div>
-              <div className="text-gray-600 font-medium">
-                {stat.label}
+              
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-2">Nehmen Sie Kontakt auf</h4>
+                <p className="text-gray-600 text-sm">
+                  abwassertec.hessen@web.de 0176-80559608 Senefelder Str. 37 63069 
+                  Offenbach Öffnungszeiten: 24/7
+                </p>
               </div>
             </div>
-          ))}
+          </div>
+          
+          <div className="mt-8 pt-8 border-t border-blue-200">
+            <p className="text-gray-500 text-sm">©2025 All rights reserved</p>
+          </div>
         </div>
       </div>
     </section>

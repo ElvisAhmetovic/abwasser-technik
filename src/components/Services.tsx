@@ -1,87 +1,132 @@
 
-import { Factory, Wrench, FlaskConical, Users, Gauge, Recycle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const Services = () => {
-  const services = [
-    {
-      icon: Factory,
-      title: 'Kläranlagen',
-      description: 'Planung, Bau und Wartung von kommunalen und industriellen Kläranlagen nach neuesten Standards.',
-      features: ['Biologische Reinigung', 'Mechanische Vorklärung', 'Schlammbehandlung']
-    },
-    {
-      icon: Wrench,
-      title: 'Anlagenwartung',
-      description: 'Regelmäßige Wartung und Instandhaltung Ihrer Abwasseranlagen für optimale Leistung.',
-      features: ['24/7 Service', 'Präventive Wartung', 'Notfallreparaturen']
-    },
-    {
-      icon: FlaskConical,
-      title: 'Wasseranalytik',
-      description: 'Professionelle Analyse und Überwachung der Wasserqualität mit modernster Labortechnik.',
-      features: ['Laboranalysen', 'Online-Monitoring', 'Compliance-Berichte']
-    },
-    {
-      icon: Users,
-      title: 'Beratung',
-      description: 'Umfassende Beratung für optimale Abwasserlösungen und Genehmigungsverfahren.',
-      features: ['Machbarkeitsstudien', 'Genehmigungsplanung', 'Wirtschaftlichkeitsanalyse']
-    },
-    {
-      icon: Gauge,
-      title: 'Prozessoptimierung',
-      description: 'Optimierung bestehender Anlagen für höhere Effizienz und niedrigere Betriebskosten.',
-      features: ['Leistungssteigerung', 'Energieeffizienz', 'Kostensenkung']
-    },
-    {
-      icon: Recycle,
-      title: 'Umwelttechnik',
-      description: 'Nachhaltige Technologien für Ressourcenrückgewinnung und Umweltschutz.',
-      features: ['Phosphorrückgewinnung', 'Biogas-Nutzung', 'Kreislaufwirtschaft']
-    }
-  ];
-
   return (
-    <section id="services" className="py-20 bg-white">
+    <section id="services" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Unsere Leistungen
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Von der Planung bis zur Wartung bieten wir komplette Lösungen für Ihre Abwassertechnik
-          </p>
+        {/* Emergency Service Section */}
+        <div className="mb-20">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-200 to-blue-200 rounded-full blur-3xl opacity-30 scale-150"></div>
+              <div className="relative bg-white rounded-3xl p-1">
+                <img
+                  src="/lovable-uploads/ac0ee41a-33e5-4552-ab17-b1a2dfd17f4e.png"
+                  alt="24h Notdienst"
+                  className="rounded-3xl w-full h-auto"
+                />
+              </div>
+            </div>
+            
+            <div>
+              <h2 className="text-4xl font-bold text-blue-600 mb-6">
+                24h Hotline - Rohrreinigung Notdienst
+              </h2>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                Ihr WC verstopft? Das Waschbecken verstopft? Der Keller steht unter Wasser? 
+                Unser Notdienst steht Ihnen 24 Stunden am Tag, 365 Tage im Jahr zur 
+                Verfügung! Zuverlässige und schnelle Experten für all Ihre Probleme mit 
+                Sanitärinstallationen. Kontaktieren Sie uns, egal wie dringend – wir sind für Sie 
+                da!
+              </p>
+              
+              <button className="bg-cyan-500 text-white px-8 py-4 rounded-full hover:bg-cyan-600 transition-colors duration-200 flex items-center font-medium group">
+                Tel: 0176-80559608 - Direktruf zu dem Monteur
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+              </button>
+            </div>
+          </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div
-              key={service.title}
-              className="bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300 group animate-fade-in"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div className="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-lg mb-6 group-hover:bg-blue-200 transition-colors duration-300">
-                <service.icon className="w-8 h-8 text-blue-800" />
-              </div>
-              
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                {service.title}
-              </h3>
-              
-              <p className="text-gray-600 mb-6">
-                {service.description}
-              </p>
-
-              <ul className="space-y-2">
-                {service.features.map((feature) => (
-                  <li key={feature} className="flex items-center text-sm text-gray-700">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+        {/* Main Services */}
+        <div className="grid lg:grid-cols-2 gap-16 mb-16">
+          {/* Pipe Cleaning */}
+          <div>
+            <div className="mb-8">
+              <img
+                src="/lovable-uploads/38eaee19-d110-4739-b08e-b615fcfc703b.png"
+                alt="Rohr- & Kanalreinigung"
+                className="w-full h-64 object-cover rounded-2xl"
+              />
             </div>
-          ))}
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Rohr- & Kanalreinigung
+            </h3>
+            <p className="text-gray-600 leading-relaxed">
+              Rohrverstopfungen & Notdienst (24/7 & 365 Tage): Eine verstopfte 
+              Abwasserleitung tritt oft zum ungünstigsten Zeitpunkt auf und kann 
+              Überschwemmungen oder Rückstau verursachen. In solchen Fällen bieten wir 
+              Ihnen unseren 24-Stunden-Service zu fairen Festpreisen und ohne 
+              Anfahrtskosten an.
+            </p>
+          </div>
+
+          {/* Pipe Rehabilitation */}
+          <div>
+            <div className="mb-8">
+              <img
+                src="/lovable-uploads/38eaee19-d110-4739-b08e-b615fcfc703b.png"
+                alt="Rohr- & Kanalsanierung"
+                className="w-full h-64 object-cover rounded-2xl"
+              />
+            </div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Rohr- & Kanalsanierung
+            </h3>
+            <p className="text-gray-600 leading-relaxed">
+              Bei der Überprüfung von Rohrleitungen können Defekte oder Schwachstellen 
+              auftreten, die eine Reparatur oder Sanierung notwendig machen. In solchen 
+              Fällen stehen wir Ihnen sowohl für gezielte Einzelmaßnahmen als auch für eine 
+              vollständige Sanierung mit unserer Expertise zur Verfügung.
+            </p>
+          </div>
+        </div>
+
+        {/* Additional Services */}
+        <div className="grid lg:grid-cols-2 gap-16">
+          {/* TV Camera Inspection */}
+          <div>
+            <div className="mb-8">
+              <img
+                src="/lovable-uploads/9fdd4797-601d-4cc5-821b-69ceadd1fd8a.png"
+                alt="Rohr- & Kanaluntersuchung mit TV-Kamera"
+                className="w-full h-64 object-cover rounded-2xl"
+              />
+            </div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Rohr- & Kanaluntersuchung mit TV-Kamera
+            </h3>
+            <p className="text-gray-600 leading-relaxed">
+              Eine Kamerainspektion ist entscheidend für die Beurteilung von 
+              Abwasserleitungen und Rohrsystemen. Sie bildet die Grundlage für 
+              Empfehlungen zur Rohrreinigung, Rohr- und Kanalsanierung sowie für mögliche 
+              Reparaturen. Unsere hochwertigen Inspektionssysteme bieten präzise Ergebnisse 
+              bei der Kanalinspektion und können flexibel in verschiedenen Szenarien 
+              eingesetzt werden.
+            </p>
+          </div>
+
+          {/* Leak Testing */}
+          <div>
+            <div className="mb-8">
+              <img
+                src="/lovable-uploads/9fdd4797-601d-4cc5-821b-69ceadd1fd8a.png"
+                alt="Kanaldichtheitsprüfung"
+                className="w-full h-64 object-cover rounded-2xl"
+              />
+            </div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Kanaldichtheitsprüfung
+            </h3>
+            <p className="text-gray-600 leading-relaxed">
+              Die Kanaldichtheitsprüfung als Komplettservice – Laut § 59/60/61a des 
+              Wasserhaushaltsgesetzes in Verbindung mit der DIN 1986-30 sind alle 
+              Eigentümer von privaten Grundstücken verpflichtet, die Abwasserleitungen und 
+              Schächte ihrer häuslichen Entwässerungsanlagen regelmäßig auf ihren Zustand 
+              und ihre Dichtheit zu überprüfen.
+            </p>
+          </div>
         </div>
       </div>
     </section>
