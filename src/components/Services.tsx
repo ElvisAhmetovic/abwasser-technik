@@ -12,7 +12,7 @@ const Services = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-200 to-blue-200 rounded-full blur-3xl opacity-30 scale-150"></div>
               <div className="relative bg-white rounded-3xl p-1">
                 <img
-                  src="/lovable-uploads/af4db60a-4537-4e06-ad45-fff8e25acde3.png"
+                  src="/lovable-uploads/296071b4-39d0-46d0-bcb1-e60374dcff2f.png"
                   alt="24h Notdienst"
                   className="rounded-3xl w-full h-auto"
                 />
