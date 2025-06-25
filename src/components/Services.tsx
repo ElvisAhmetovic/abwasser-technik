@@ -81,7 +81,7 @@ const Services = () => {
           <div>
             <div className="mb-8">
               <img
-                src="/lovable-uploads/da945696-d841-493b-bdbc-7d40668f5ce9.png"
+                src="/lovable-uploads/5f66625b-3f39-4f6f-9da7-b2d2d2604e4a.png"
                 alt="Rohr- & Kanaluntersuchung mit TV-Kamera"
                 className="w-full h-64 object-cover rounded-2xl"
               />
